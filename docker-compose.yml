@@ -1,0 +1,77 @@
+version: '3'
+
+services:
+  database:
+    container_name: recruitment-event-database
+    build: ./database/.
+    volumes:
+      - recruitment-event-database-data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+    expose:
+      - 27017
+      - 27018
+      - 27019
+    networks:
+      - network
+    restart: on-failure
+
+  backend:
+    container_name: recruitment-event-backend
+    build: ./backend/.
+    environment:
+      - NODE_ENV=production
+    expose:
+      - 3002
+    networks:
+      - network
+    restart: on-failure
+    depends_on:
+      - database
+
+  admin:
+    container_name: recruitment-event-admin
+    build: ./admin/.
+    environment:
+      - NODE_ENV=production
+    expose:
+      - 3003
+    networks:
+      - network
+    restart: on-failure
+    depends_on:
+      - database
+
+  frontend:
+    container_name: recruitment-event-frontend
+    build: ./frontend/.
+    expose:
+      - 3001
+    networks:
+      - network
+    restart: on-failure
+    depends_on:
+      - backend
+
+  gateway:
+    container_name: recruitment-event-gateway
+    build: ./gateway/.
+    ports:
+      - 80:80
+    expose:
+      - 80
+    networks:
+      - network
+      - host
+    restart: on-failure
+    depends_on:
+      - frontend
+
+networks:
+  network:
+    driver: "bridge"
+  host:
+
+volumes:
+  recruitment-event-database-data:

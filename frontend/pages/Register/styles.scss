@@ -1,0 +1,185 @@
+section.c-register {
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+
+    position: relative;
+
+    img.background {
+        width: 100%;
+        height: 100vh;
+
+        object-position: top left;
+        object-fit: cover;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: 1;
+
+        @media only screen and (max-width: 1235px) {
+            display: none;
+        }
+    }
+
+    div.register-wrapper {
+        width: 650px;
+        min-height: 100vh;
+        height: auto;
+
+        padding: 50px 25px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        background: #0e1118;
+
+        position: relative;
+        z-index: 2;
+
+        @media only screen and (max-width: 1235px) {
+            width: 100%;
+        }
+
+        img.tournament-logo {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            width: 450px;
+
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 1.7em;
+
+            text-align: center;
+
+            color: #fff;
+
+            margin-bottom: 70px;
+        }
+
+        div.register-form {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+
+            margin: 0 20px;
+
+            h3 {
+                width: 100%;
+
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 1.2em;
+
+                color: #fff;
+
+                margin-bottom: 20px;
+            }
+
+            div.horizontal-wrapper {
+                width: 100%;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-content: center;
+                align-items: center;
+
+                input {
+                    width: 100% !important;
+                }
+            }
+
+            button.button-register {
+                display: block;
+
+                width: 100%;
+                max-width: 450px;
+                height: 50px;
+
+                border: 2px solid #fe4554;
+                border-radius: 5px;
+
+                background: #fe4554;
+                color: #fff;
+
+                font-family: "Poppins", sans-serif;
+                font-weight: 600;
+                font-size: 0.9em;
+
+                transition: 0.3s ease-in-out;
+
+                cursor: pointer;
+
+                &:hover {
+                    transition: 0.3s ease-in-out;
+                    background: transparent;
+                }
+
+                &.disabled {
+                    transition: 0.3s ease-in-out;
+                    background: transparent;
+                    cursor: initial;
+                }
+            }
+        }
+
+        div.register-success {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+
+            margin: 0 20px;
+
+            img.success-image {
+                width: 130px;
+                height: auto;
+            }
+
+            p {
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 1.1em;
+
+                color: #fff;
+
+                margin-top: 50px;
+            }
+        }
+    }
+}

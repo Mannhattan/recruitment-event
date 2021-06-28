@@ -1,0 +1,6 @@
+{
+    "PORT": 3002,
+    "DB_CONNECTION_STRING": "mongodb://admin:admin@database:27017/recruitment?authSource=admin",
+    "DB_POOL_SIZE": 50,
+    "BACKEND_ACCESS_KEY": "JK8VptNGHTU2HPnWz0O1h3jkqOuF2Rjg"
+}

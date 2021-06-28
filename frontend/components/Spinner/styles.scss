@@ -1,0 +1,39 @@
+div.spinner-wrapper {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    background: #0e1118;
+
+    div.spinner {
+        width: 150px;
+        height: 150px;
+
+        border-left: 10px solid #ff4654;
+        border-right: 10px solid #ff4654;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+
+        border-radius: 50%;
+
+        animation-name: spin;
+        animation-duration: 4000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

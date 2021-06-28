@@ -1,0 +1,63 @@
+div.form-input-wrapper {
+    height: auto;
+
+    margin-bottom: 25px;
+
+    label {
+        display: block;
+        color: #fff;
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+
+        margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        display: block;
+
+        height: 50px;
+
+        padding: 0 15px;
+
+        border: none;
+        border-radius: 5px;
+
+        background: #1b2026;
+        color: #fff;
+
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+
+        &.error {
+            background: rgba($color: #f00, $alpha: 0.1);
+        }
+    }
+
+    &.small {
+        width: 100% !important;
+        max-width: 215px;
+        input {
+            width: 100% !important;
+            max-width: 215px;
+        }
+
+        &:last-of-type {
+            margin-left: 5px;
+        }
+        &:not(:last-of-type) {
+            margin-right: 5px;
+        }
+    }
+    &.medium {
+        width: 100%;
+        max-width: 450px;
+        input {
+            width: 100% !important;
+            max-width: 450px;
+        }
+    }
+}
