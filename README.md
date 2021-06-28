@@ -44,7 +44,7 @@ To get a local copy up and running follow these simple steps.
 ##### Routes:
 
 * `/` - frontend app
-* `/admin` - admin panel
+* `/admin` - admin panel (default login: admin | default password: admin)
 * `/api` - backend api
 
 ##### Further development:
