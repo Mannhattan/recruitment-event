@@ -43,6 +43,8 @@ To get a local copy up and running follow these simple steps.
 ### Usage
 ##### Routes:
 
+Whole app binds to a `localhost` address and has these routes (managed by gateway):
+
 * `/` - frontend app
 * `/admin` - admin panel (default login: admin | default password: admin)
 * `/api` - backend api
