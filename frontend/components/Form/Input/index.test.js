@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+*/
+
 import React from 'react';
 import Input from "./index";
 import { shallow, mount } from 'enzyme';
@@ -9,10 +13,17 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Input component', () => {
     it("Renders", () => {
-        shallow(<Input />);
+        shallow(<Input
+            label="testLabel"
+            id="testId"
+            type="text"
+            onChange={() => { }}
+            errorMessage="test error message"
+            regexValidator={/^test$/}
+        />);
     });
 
-    it('Updates onChange event', () => {
+    it('Updates onChange event and validates input', () => {
         let updatedText = {};
 
         const component = shallow(
@@ -23,7 +34,8 @@ describe('Input component', () => {
                 onChange={(newValue) => {
                     updatedText = newValue;
                 }}
-                hasError={false}
+                errorMessage="test error message"
+                regexValidator={/^.*$/}
             />
         );
 
