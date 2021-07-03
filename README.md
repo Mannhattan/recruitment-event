@@ -55,6 +55,7 @@ Whole app requires some tweaks & upgrades:
 
 * rewriting config files, making two main configs for everything (production and development)
 * expanding docker-compose.yml with production and development configs
+* writing extended tests
 * adding minor fixes like page titles etc.
 * simplify naming conventions (maybe?)
 * replacing kinda cumbersome sass styling to one of more elegant solutions like CSS-IN-JS
@@ -67,8 +68,6 @@ Whole app requires some tweaks & upgrades:
       * figure out a way to consider client timestamps when saving records to database
   3. frontend:
       * making better use of store - fetch data about current tournament from backend etc.
-      * add form validation error descriptions (not only colored alerts)
-      * creating at least basic frontend validation before sending data to backend
       * distributing registration page to smaller components
       * making better use of react router - maybe make a tournament page? (currently using only one route)
   4. database:
@@ -76,6 +75,14 @@ Whole app requires some tweaks & upgrades:
   5. gateway:
       * adding ssl certificates
 
+
+##### Fixed
+
+Here are fixes that were implemented since v1.0:
+* added API response status codes based on request status (and adapted frontend to use those)
+* added propTypes for components
+* added front end data validation
+* 
 
 ### Summary
 

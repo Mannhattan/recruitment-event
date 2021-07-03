@@ -150,6 +150,17 @@ section.c-register {
                     cursor: initial;
                 }
             }
+
+            p.global-error {
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 0.9em;
+
+                margin-bottom: 20px;
+
+                color: #fe4554;
+                text-align: left;
+            }
         }
 
         div.register-success {

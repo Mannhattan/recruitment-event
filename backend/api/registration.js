@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
 
         const newRegistration = await registerParticipant(firstName, lastName, email, eventDate);
 
-        res.json({
+        res.status(200).json({
             data: {
                 registration: newRegistration
             },
@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
             }
         });
     } catch (errors) {
-        res.json({
+        res.status(errors.includes("ERROR_CREATING_RECORD") ? 500 : 400).json({
             data: {},
             errors: [...errors],
             meta: {
