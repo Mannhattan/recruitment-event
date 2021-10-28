@@ -75,9 +75,9 @@ Whole app requires some tweaks & upgrades:
       * adding ssl certificates
 
 
-##### Fixed
+##### Fixed & upgraded
 
-Here are fixes that were implemented since v1.0:
+Here are fixes and upgrades that were implemented since v1.0:
 * added API response status codes based on request status (and adapted frontend to use those)
 * added propTypes for components
 * added front end data validation
